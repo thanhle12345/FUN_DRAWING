@@ -1,5 +1,21 @@
 #ifndef LINES_H
 #define LINES_H
+
+/*
+        Lines Data format:
+            Type: Line
+            Length: a number > 0.
+            Direction: "Vertical" or "Horizontal"
+            DrawSymbol: a character.
+
+        Example:
+            [Object7]
+            Type = Line
+            Length = 50
+            Direction = Vertical
+            DrawSymbol = ~
+*/
+
 #include <Objects.h>
 
 class Lines: public Objects
@@ -14,11 +30,9 @@ public:
     void SetDir(std::string dir);
     int GetLength();
     std::string GetDir();
-    char GetSym();
-    bool CheckAttribute(std::string attr);
-    bool CheckingError(std::string attr, std::string value);
+
     void GetData(std::string attr, std::string value);
-    bool CheckFinish();
+    void CheckingError();
     void Draw();
     void DataInfo();
 };

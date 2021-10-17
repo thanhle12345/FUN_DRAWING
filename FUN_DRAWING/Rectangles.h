@@ -1,5 +1,20 @@
 #ifndef RECTANGLES_H
 #define RECTANGLES_H
+/*
+        Rectangles Data format:
+            Type: Rectangle
+            Width: a number > 0.
+            Height: a number > 0.
+            DrawSymbol: a character.
+
+        Example:
+            [Object1]
+            Type = Rectangle
+            Width = 50
+            Height = 30
+            DrawSymbol = *
+*/
+
 #include <Objects.h>
 
 class Rectangles: public Objects
@@ -14,11 +29,9 @@ public:
     void SetHeight(int h);
     int GetWidth();
     int GetHeight();
-    char GetSym();
-    bool CheckAttribute(std::string attr);
-    bool CheckingError(std::string attr, std::string value);
+
     void GetData(std::string attr, std::string value);
-    bool CheckFinish();
+    void CheckingError();
     void Draw();
     void DataInfo();
 };

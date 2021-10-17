@@ -5,26 +5,8 @@ Lines::Lines(){}
 void Lines::SetLength(int length){Length = length;}
 void Lines::SetDir(std::string dir){Direction = dir;}
 int Lines::GetLength(){return Length;}
-char Lines::GetSym(){return DrawSymBol;}
+
 std::string Lines::GetDir(){return Direction;}
-
-bool Lines::CheckFinish(){return (Length > 0 && (Direction == "Vertical"|| Direction == "Horizontal") && DrawSymBol != '\0');}
-
-bool Lines::CheckAttribute(std::string attr)
-{
-    for (auto i : Attribute) {
-        if (i == attr) return true;
-    }
-    return false;
-}
-
-bool Lines::CheckingError(std::string attr, std::string value)
-{
-    if (attr == "Length") return (std::stoi(value) > 0);
-    else if (attr == "Direction") return (value == "Vertical" || value == "Horizontal");
-    else if (attr == "DrawSymbol") return (value.length() == 1);
-    else return false;
-}
 
 void Lines::GetData(std::string attr, std::string value)
 {
@@ -33,42 +15,53 @@ void Lines::GetData(std::string attr, std::string value)
     else if (attr == "DrawSymbol") DrawSymBol = value[0];
 }
 
+void Lines::CheckingError()
+{
+    if (Length <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Length." << std::endl; error = true; currentY++;}
+    else if (Direction != "Vertical" && Direction != "Horizontal") {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Direction." << std::endl; error = true; currentY++;}
+    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
+    else error = false;
+}
+
 void Lines::DataInfo()
 {
-    std::cout << Name << ": " << Type << std::endl;
+    std::cout << "Object " << Number << " Infomation:" << std::endl;
+    std::cout << "Name: " << Name << std::endl;
+    std::cout << "Type: " << Type << std::endl;
     std::cout << "Length: " << Length << std::endl;
     std::cout << "Direction: " << Direction << std::endl;
     std::cout << "DrawSymbol: " << DrawSymBol << std::endl;
-    currentY += 4;
+    currentY += 6;
 }
 
 void Lines::Draw()
 {
-//    std::cout << Name << " :" << std::endl;
-    currentY++;
-    if (Direction == "Vertical"){
-        for (int i = 0; i <= Length-1; i++){
-                destCoord.X = i;
-                destCoord.Y = currentY;
-                SetConsoleCursorPosition(hStdout, destCoord);
-                std::cout << DrawSymBol;
+    if(error == false){
+        currentY++;
+        if (Direction == "Vertical"){
+            for (int i = 0; i <= Length-1; i++){
+                    destCoord.X = i;
+                    destCoord.Y = currentY;
+                    SetConsoleCursorPosition(hStdout, destCoord);
+                    std::cout << DrawSymBol;
+            }
+            currentY += 1;
+            destCoord.X = 0;
+            destCoord.Y = currentY;
+            SetConsoleCursorPosition(hStdout, destCoord);
         }
-        currentY += 1;
-        destCoord.X = 0;
-        destCoord.Y = currentY;
-        SetConsoleCursorPosition(hStdout, destCoord);
-    }
-    else if (Direction == "Horizontal"){
-        for (int i = 0; i <= Length-1; i++){
-                destCoord.X = 0;
-                destCoord.Y = currentY + i;
-                SetConsoleCursorPosition(hStdout, destCoord);
-                std::cout << DrawSymBol;
+        else if (Direction == "Horizontal"){
+            for (int i = 0; i <= Length-1; i++){
+                    destCoord.X = 0;
+                    destCoord.Y = currentY + i;
+                    SetConsoleCursorPosition(hStdout, destCoord);
+                    std::cout << DrawSymBol;
+            }
+            currentY += Length + 1;
+            destCoord.X = 0;
+            destCoord.Y = currentY;
+            SetConsoleCursorPosition(hStdout, destCoord);
         }
-        currentY += Length + 1;
-        destCoord.X = 0;
-        destCoord.Y = currentY;
-        SetConsoleCursorPosition(hStdout, destCoord);
     }
 }
 

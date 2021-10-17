@@ -6,8 +6,6 @@
 #include <UIHandler.h>
 #include <Objects.h>
 
-extern int num_obj;
-extern int error_key;
 class InputHandler
 {
 private:
@@ -19,6 +17,7 @@ private:
     std::vector<Objects*> objects;
 
 public:
+    bool END_OBJ = false;
     InputHandler();
     void FileHandle();
     void GetData(std::string data);

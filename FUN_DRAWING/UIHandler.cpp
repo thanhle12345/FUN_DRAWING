@@ -39,15 +39,10 @@ void UIHandler::Draw()
 {
     system("CLS");
     std::vector<Objects*> ListObjects = Storage::getObject();
-//    for (int i = 1; i <= num_obj; i++)
-//    {
-//        switch (error_key) {
-
-//        }
-//    }
     for (auto i : ListObjects)
     {
-//        std::cout << i->GetErrorKey() << std::endl;
+        i->CheckingObject();
+        i->CheckingError();
         i->DataInfo();
         i->Draw();
     }

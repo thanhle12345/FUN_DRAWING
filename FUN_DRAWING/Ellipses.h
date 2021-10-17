@@ -1,6 +1,21 @@
 #ifndef ELLIPSES_H
 #define ELLIPSES_H
 
+/*
+        Ellipse Data format:
+            Type: Ellipse
+            BigAxis: a number > 0.
+            SmallAxis: a number > 0.
+            DrawSymbol: a character.
+
+        Example:
+            [Object3]
+            Type = Ellipse
+            BigAxis = 50
+            SmallAxis = 30
+            DrawSymbol = -
+*/
+
 #include <Objects.h>
 #include <math.h>
 
@@ -17,10 +32,9 @@ public:
     int GetBigAxis();
     int GetSmallAxis();
     char GetSym();
-    bool CheckAttribute(std::string attr);
-    bool CheckingError(std::string attr, std::string value);
+
     void GetData(std::string attr, std::string value);
-    bool CheckFinish();
+    void CheckingError();
     void Draw();
     void DataInfo();
 };

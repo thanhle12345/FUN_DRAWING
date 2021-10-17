@@ -7,26 +7,21 @@ const std::string ObjectType[4] = {"Rectangle","Triangle","Ellipse","Line"};
 
 Objects::Objects(){}
 
-bool Objects::CheckObject(std::string type)
+void Objects::CheckingObject()
 {
-    for(auto i : ObjectType)
-    {
-        if (type == i) return true;
-    }
-    return false;
+    if (Name == "") {std::cout << "ERROR: Object " << Number << " : " << Name << " has no name." << std::endl; error = true; currentY++;}
+    if (Type != "Rectangle" && Type != "Triangle" && Type != "Ellipse" && Type != "Line") {std::cout << "ERROR: Object " << Number << " : " << Name << " is wrong Type\n" << std::endl; error = true; currentY+=3;}
 }
 
 void Objects::SetName(std::string str){Name = str;}
 void Objects::SetType(std::string str){Type = str;}
+void Objects::SetNumber(int num){Number = num;}
 
 std::string Objects::GetName(){return Name;}
 std::string Objects::GetType(){return Type;}
-char Objects::GetSym(){};
+int Objects::GetNumber(){return Number;}
 
-bool Objects::CheckAttribute(std::string attr){}
-bool Objects::CheckingError(std::string attr, std::string value){}
-bool Objects::CheckFinish(){}
 void Objects::GetData(std::string attr, std::string value){}
-//void Objects::ShowError(){}
+void Objects::CheckingError(){}
 void Objects::Draw(){}
 void Objects::DataInfo(){}

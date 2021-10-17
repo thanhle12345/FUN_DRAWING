@@ -12,21 +12,24 @@ class Objects
     protected:
         std::string Name {0};
         std::string Type {0};
+        int Number {0};
         char DrawSymBol {0};
+        bool error;
+
     public:
         Objects();
+
         void SetName(std::string str);
         void SetType(std::string str);
+        void SetNumber(int num);
 
         std::string GetName();
         std::string GetType();
-        virtual char GetSym();
+        int GetNumber();
 
-        bool CheckObject(std::string type);
-        virtual bool CheckAttribute(std::string attr);
-        virtual bool CheckingError(std::string attr, std::string value);
         virtual void GetData(std::string attr, std::string value);
-        virtual bool CheckFinish();
+        void CheckingObject();
+        virtual void CheckingError();
         virtual void Draw();
         virtual void DataInfo();
 };

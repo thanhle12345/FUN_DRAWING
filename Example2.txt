@@ -1,5 +1,5 @@
 [Object9]
-Type = Rectangle
+Type = Rectang
 Width = 10
 Height = 20
 DrawSymbol = .

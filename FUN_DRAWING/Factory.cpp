@@ -9,7 +9,7 @@ Objects* Factory::createObject(std::string type)
     else if (type == "Triangle") return new Triangles;
     else if (type == "Ellipse") return new Ellipses;
     else if (type == "Line") return new Lines;
-    else return NULL;
+    else return new Objects;
 }
 void Storage::addObject(Objects *Object){ObjectList.push_back(Object);}
 std::vector<Objects*> Storage::getObject(){return ObjectList;}
