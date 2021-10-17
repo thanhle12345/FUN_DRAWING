@@ -12,7 +12,6 @@ private:
     std::string filepath;
     std::string name;
     std::string type;
-//    std::string Type[4] = {"Rectangle","Triangle","Ellipse","Line"};
     Objects* object = NULL;
     std::vector<Objects*> objects;
 

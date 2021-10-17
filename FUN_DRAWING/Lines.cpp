@@ -17,9 +17,9 @@ void Lines::GetData(std::string attr, std::string value)
 
 void Lines::CheckingError()
 {
-    if (Length <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Length." << std::endl; error = true; currentY++;}
-    else if (Direction != "Vertical" && Direction != "Horizontal") {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Direction." << std::endl; error = true; currentY++;}
-    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
+    if (Length <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Length." << std::endl; error = true; currentY++;}
+    else if (Direction != "Vertical" && Direction != "Horizontal") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Direction." << std::endl; error = true; currentY++;}
+    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
     else error = false;
 }
 

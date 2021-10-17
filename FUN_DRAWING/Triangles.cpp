@@ -17,10 +17,10 @@ void Triangles::GetData(std::string attr, std::string value)
 
 void Triangles::CheckingError()
 {
-    if (TriangleType != "IsoscelesTriangle" && TriangleType != "RightTriangle") {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Triangle Type." << std::endl; error = true; currentY++;}
-    if (Width <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Width." << std::endl;  error = true; currentY++;}
-    if (Height <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
-    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
+    if (TriangleType != "IsoscelesTriangle" && TriangleType != "RightTriangle") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Triangle Type." << std::endl; error = true; currentY++;}
+    if (Width <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width." << std::endl;  error = true; currentY++;}
+    if (Height <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
+    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
     else error = false;
 }
 

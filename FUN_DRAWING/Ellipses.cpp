@@ -16,9 +16,9 @@ void Ellipses::GetData(std::string attr, std::string value)
 
 void Ellipses::CheckingError()
 {
-    if (BigAxis <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid BigAxis" << std::endl; error = true; currentY++;}
-    else if (SmallAxis <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid SmallAxis" << std::endl; error = true; currentY++;}
-    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
+    if (BigAxis <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid BigAxis" << std::endl; error = true; currentY++;}
+    else if (SmallAxis <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid SmallAxis" << std::endl; error = true; currentY++;}
+    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
     else error = false;
 }
 

@@ -16,9 +16,9 @@ void Rectangles::GetData(std::string attr, std::string value)
 
 void Rectangles::CheckingError()
 {
-    if (Width <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Width." << std::endl; error = true; currentY++;}
-    else if (Height <= 0) {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
-    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << " : " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
+    if (Width <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width." << std::endl; error = true; currentY++;}
+    else if (Height <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
+    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
     else  error = false;
 }
 
