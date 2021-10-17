@@ -1,0 +1,42 @@
+[Object1]
+Type = Rectangle
+Width = 50
+Height = 30
+DrawSymbol = *
+[Object2]
+Type = Triangle
+TriangleType = RightTriangle
+Width = 40
+Height = 30
+DrawSymbol = +
+[Object3]
+Type = Ellipse
+BigAxis = 50
+SmallAxis = 30
+DrawSymbol = -
+[Object4]
+Type = Line
+Length = 50
+Direction = Vertical
+DrawSymbol = ~
+[Object5]
+Type = Rectangle
+Width = 30
+Height = 20
+DrawSymbol = *
+[Object6]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 31
+Height = 20
+DrawSymbol = +
+[Object7]
+Type = Line
+Length = 50
+Direction = Vertical
+DrawSymbol = ~
+[Object8]
+Type = Ellipse
+BigAxis = 30
+SmallAxis = 20
+DrawSymbol = -

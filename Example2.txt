@@ -1,0 +1,20 @@
+[Object9]
+Type = Rectangle
+Width = 10
+Height = 20
+DrawSymbol = .
+[]
+Type = Triangle
+TriangleType = RightTriangle
+Width = 60
+Height = 20
+DrawSymbol = +
+[Object11]
+Type = Ellipse
+BigAxis = 30
+SmallAxis = 50
+DrawSymbol = +
+[Object12]
+Type = Line
+Length = 30
+DrawSymbol = ~
