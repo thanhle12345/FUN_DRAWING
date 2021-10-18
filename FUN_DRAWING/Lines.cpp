@@ -1,3 +1,18 @@
+/*
+        Lines Data format:
+            Type: Line
+            Length: between 10 and 100.
+            Direction: "Vertical" or "Horizontal"
+            DrawSymbol: a character.
+
+        Example:
+            [Object7]
+            Type = Line
+            Length = 50
+            Direction = Vertical
+            DrawSymbol = ~
+*/
+
 #include "Lines.h"
 
 Lines::Lines(){}
@@ -17,10 +32,9 @@ void Lines::GetData(std::string attr, std::string value)
 
 void Lines::CheckingError()
 {
-    if (Length <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Length." << std::endl; error = true; currentY++;}
-    else if (Direction != "Vertical" && Direction != "Horizontal") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Direction." << std::endl; error = true; currentY++;}
-    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
-    else error = false;
+    if (Length < 10 || Length > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Length. Length between 10 and 100." << std::endl; error = true; currentY++;}
+    if (Direction != "Vertical" && Direction != "Horizontal") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Direction. Direction can be Vertical or Horizontal" << std::endl; error = true; currentY++;}
+    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 
 void Lines::DataInfo()
@@ -30,7 +44,7 @@ void Lines::DataInfo()
     std::cout << "Type: " << Type << std::endl;
     std::cout << "Length: " << Length << std::endl;
     std::cout << "Direction: " << Direction << std::endl;
-    std::cout << "DrawSymbol: " << DrawSymBol << std::endl;
+    std::cout << "DrawSymbol: " << DrawSymBol << "\n" << std::endl;
     currentY += 6;
 }
 

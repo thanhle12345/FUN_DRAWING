@@ -1,20 +1,6 @@
 #ifndef LINES_H
 #define LINES_H
 
-/*
-        Lines Data format:
-            Type: Line
-            Length: a number > 0.
-            Direction: "Vertical" or "Horizontal"
-            DrawSymbol: a character.
-
-        Example:
-            [Object7]
-            Type = Line
-            Length = 50
-            Direction = Vertical
-            DrawSymbol = ~
-*/
 
 #include <Objects.h>
 

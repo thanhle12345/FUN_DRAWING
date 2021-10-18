@@ -1,20 +1,5 @@
 #ifndef RECTANGLES_H
 #define RECTANGLES_H
-/*
-        Rectangles Data format:
-            Type: Rectangle
-            Width: a number > 0.
-            Height: a number > 0.
-            DrawSymbol: a character.
-
-        Example:
-            [Object1]
-            Type = Rectangle
-            Width = 50
-            Height = 30
-            DrawSymbol = *
-*/
-
 #include <Objects.h>
 
 class Rectangles: public Objects

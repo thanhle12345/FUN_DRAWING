@@ -1,3 +1,18 @@
+/*
+        Rectangles Data format:
+            Type: Rectangle
+            Width: between 10 and 100.
+            Height: between 10 and 100.
+            DrawSymbol: a character.
+
+        Example:
+            [Object1]
+            Type = Rectangle
+            Width = 50
+            Height = 30
+            DrawSymbol = *
+*/
+
 #include "Rectangles.h"
 
 Rectangles::Rectangles(){}
@@ -16,10 +31,9 @@ void Rectangles::GetData(std::string attr, std::string value)
 
 void Rectangles::CheckingError()
 {
-    if (Width <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width." << std::endl; error = true; currentY++;}
-    else if (Height <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
-    else if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
-    else  error = false;
+    if (Width < 10 || Width > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 100." << std::endl; error = true; currentY++;}
+    if (Height < 10 || Height > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between 10 and 100." << std::endl; error = true; currentY++;}
+    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 
 void Rectangles::DataInfo()
@@ -29,7 +43,7 @@ void Rectangles::DataInfo()
     std::cout << "Type: " << Type << std::endl;
     std::cout << "Width: " << Width << std::endl;
     std::cout << "Height: " << Height << std::endl;
-    std::cout << "DrawSymbol: " << DrawSymBol << std::endl;
+    std::cout << "DrawSymbol: " << DrawSymBol << "\n" << std::endl;
     currentY += 6;
 }
 

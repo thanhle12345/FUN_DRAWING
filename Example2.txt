@@ -1,20 +1,25 @@
-[Object9]
-Type = Rectang
-Width = 10
-Height = 20
-DrawSymbol = .
-[]
+[Ex2_Shape1]
+Type = Circle
+Width = 50
+Height = 30
+DrawSymbol = *
+asasdasfafasfas
+[Ex2_Shape2]
 Type = Triangle
 TriangleType = RightTriangle
-Width = 60
-Height = 20
+Width = 40
 DrawSymbol = +
-[Object11]
+[Ex2_Shape3]
 Type = Ellipse
-BigAxis = 30
-SmallAxis = 50
-DrawSymbol = +
-[Object12]
+HorizontalAxis = -50
+VerticalAxis = -30
+DrawSymbol = -
+[Ex2_Shape4]
 Type = Line
-Length = 30
+Length = 50
 DrawSymbol = ~
+[Ex2_Shape5]
+Type = Rectangle
+Width = 30
+Height = 20
+DrawSymbol = *

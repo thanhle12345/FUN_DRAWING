@@ -1,3 +1,20 @@
+/*
+        Rectangles Data format:
+            Type: Triangle
+            TriangleType: "IsoscelesTriangle" or "RightTriangle"
+            Width: between 10 and 100.
+            Height: between 10 and 100.
+            DrawSymbol: a character.
+
+        Example:
+            [Object6]
+            Type = Triangle
+            TriangleType = IsoscelesTriangle
+            Width = 31
+            Height = 20
+            DrawSymbol = +
+*/
+
 #include "Triangles.h"
 
 Triangles::Triangles(){}
@@ -17,11 +34,10 @@ void Triangles::GetData(std::string attr, std::string value)
 
 void Triangles::CheckingError()
 {
-    if (TriangleType != "IsoscelesTriangle" && TriangleType != "RightTriangle") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Triangle Type." << std::endl; error = true; currentY++;}
-    if (Width <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width." << std::endl;  error = true; currentY++;}
-    if (Height <= 0) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height." << std::endl; error = true; currentY++;}
-    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol" << std::endl; error = true; currentY++;}
-    else error = false;
+    if (TriangleType != "IsoscelesTriangle" && TriangleType != "RightTriangle") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Triangle Type. Triangle Type can be RightTriangle or IsoscelesTriangle" << std::endl; error = true; currentY++;}
+    if (Width < 10 || Width > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 100." << std::endl;  error = true; currentY++;}
+    if (Height < 10 || Height > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between and to 100." << std::endl; error = true; currentY++;}
+    if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 
 void Triangles::DataInfo()
@@ -32,7 +48,7 @@ void Triangles::DataInfo()
     std::cout << "TriangleType: " << TriangleType << std::endl;
     std::cout << "Width: " << Width << std::endl;
     std::cout << "Height: " << Height << std::endl;
-    std::cout << "DrawSymbol: " << DrawSymBol << std::endl;
+    std::cout << "DrawSymbol: " << DrawSymBol  << "\n" << std::endl;
     currentY += 7;
 }
 

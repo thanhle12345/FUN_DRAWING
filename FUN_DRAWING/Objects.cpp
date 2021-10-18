@@ -10,7 +10,7 @@ Objects::Objects(){}
 void Objects::CheckingObject()
 {
     if (Name == "") {std::cout << "WARNING: Object " << Number << ": " << Name << " has no name." << std::endl; error = true; currentY++;}
-    if (Type != "Rectangle" && Type != "Triangle" && Type != "Ellipse" && Type != "Line") {std::cout << "ERROR: Object " << Number << ": " << Name << " is wrong Type\n" << std::endl; error = true; currentY+=3;}
+    if (Type != "Rectangle" && Type != "Triangle" && Type != "Ellipse" && Type != "Line") {std::cout << "ERROR: Object " << Number << ": " << Name << " is wrong Type. Object Type can be Rectangle, Triangle, Ellipse or Line.\n" << std::endl; error = true; currentY+=4;}
 }
 
 void Objects::SetName(std::string str){Name = str;}

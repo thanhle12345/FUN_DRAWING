@@ -18,7 +18,7 @@ private:
 public:
     bool END_OBJ = false;
     InputHandler();
-    void FileHandle();
+    void Readfile();
     void GetData(std::string data);
 };
 #endif // INPUTHANDLER_H

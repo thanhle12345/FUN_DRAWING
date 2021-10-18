@@ -1,17 +1,16 @@
 #include "InputHandler.h"
 
 /*
-        errorkey = 0: Object has no error.
-        errorkey = 1: Object has no name.
-        errorkey = 2: Object Type is incorrect.
-        errorkey = 3: Object Attribute is wrong format.
-        errorkey = 4: Object Data is incorrect.
+
 */
+static int num_obj;
 
 InputHandler::InputHandler(){}
 
-void InputHandler::FileHandle()
+void InputHandler::Readfile()
 {
+    int num_line = 0;
+    bool line_error {false}, has_error {false};
     std::cout << "Include File Path: ";
     std::getline(std::cin, filepath);
     std::cout << std::endl;
@@ -22,9 +21,25 @@ void InputHandler::FileHandle()
         std::ifstream myfile(filepath);
         if (myfile.is_open()){
             while(std::getline(myfile,inputline)){
-                GetData(inputline);
+                num_line++;
+                if (inputline[0] == '[' || (inputline.find('=') != std::string::npos)) {GetData(inputline); line_error = false;}
+                else line_error = true;
+                if (line_error) {
+                    std::cout << "\nERROR: Line " << num_line << " is wrong format." << std::endl;
+                    std::cout << "Error at Object " << num_obj << " name: " << name << std::endl;
+                    currentY +=2;
+                    has_error = true;
+                }
             }
             myfile.close();
+            while (has_error) {
+                std::cout << "\nPress [Enter] to continue..." << std::endl;
+                char cont;
+                cont = _getch();
+                if (cont == '\r'){
+                   break;
+                }
+            }
             fileerror = false;
         }
         else {
@@ -51,7 +66,6 @@ void InputHandler::FileHandle()
 }
 void InputHandler::GetData(std::string data)
 {
-    static int num_obj;
     if(data[0] == '[')
     {
         name = data.substr(1, data.length() - 2);
@@ -60,18 +74,17 @@ void InputHandler::GetData(std::string data)
     else {
         std::string delimiter = "=";
         size_t pos = 0;
-        std::string key;
-        std::string value;
+        std::string attri, value;
         pos = data.find(delimiter);
-        key = data.substr(0, pos - 1);
+        attri = data.substr(0, pos - 1);
         value = data.substr(pos + 1 + delimiter.length(), data.length());
-        if (key == "Type"){
+        if (attri == "Type"){
             object = Factory::createObject(value);
             type = value;
             object->SetName(name);
             object->SetType(type);
             object->SetNumber(num_obj);
-        }else object->GetData(key, value);
-        if (key == "DrawSymbol") Storage::addObject(object);
+        }else object->GetData(attri, value);
+        if (attri == "DrawSymbol") Storage::addObject(object);
     }
 }

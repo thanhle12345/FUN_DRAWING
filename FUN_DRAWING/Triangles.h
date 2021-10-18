@@ -1,22 +1,5 @@
 #ifndef TRIANGLES_H
 #define TRIANGLES_H
-/*
-        Rectangles Data format:
-            Type: Triangle
-            TriangleType: "IsoscelesTriangle" or "RightTriangle"
-            Width: a number > 0.
-            Height: a number > 0.
-            DrawSymbol: a character.
-
-        Example:
-            [Object6]
-            Type = Triangle
-            TriangleType = IsoscelesTriangle
-            Width = 31
-            Height = 20
-            DrawSymbol = +
-*/
-
 #include "Objects.h"
 #include <math.h>
 

@@ -14,7 +14,7 @@ class Objects
         std::string Type {0};
         int Number {0};
         char DrawSymBol {0};
-        bool error;
+        bool error {false};
 
     public:
         Objects();
