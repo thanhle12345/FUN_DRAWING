@@ -15,6 +15,8 @@
 
 #include "Lines.h"
 
+const std::string Attribute[3] = {"Length","Direction","DrawSymbol"};
+
 Lines::Lines(){}
 
 void Lines::SetLength(int length){Length = length;}
@@ -79,3 +81,10 @@ void Lines::Draw()
     }
 }
 
+bool Lines::CheckAttribute(std::string attr)
+{
+    for (auto i:Attribute)
+    {
+        if (attr == i) return true;
+    } return false;
+}

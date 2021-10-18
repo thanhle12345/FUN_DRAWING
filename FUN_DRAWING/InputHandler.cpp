@@ -4,13 +4,14 @@
 
 */
 static int num_obj;
+bool line_error {false}, has_error {false};
 
 InputHandler::InputHandler(){}
 
 void InputHandler::Readfile()
 {
     int num_line = 0;
-    bool line_error {false}, has_error {false};
+//    bool line_error {false}, has_error {false};
     std::cout << "Include File Path: ";
     std::getline(std::cin, filepath);
     std::cout << std::endl;
@@ -64,6 +65,7 @@ void InputHandler::Readfile()
         }
     }while(fileerror);
 }
+
 void InputHandler::GetData(std::string data)
 {
     if(data[0] == '[')
@@ -74,17 +76,25 @@ void InputHandler::GetData(std::string data)
     else {
         std::string delimiter = "=";
         size_t pos = 0;
-        std::string attri, value;
+        std::string attr, value;
         pos = data.find(delimiter);
-        attri = data.substr(0, pos - 1);
+        attr = data.substr(0, pos - 1);
         value = data.substr(pos + 1 + delimiter.length(), data.length());
-        if (attri == "Type"){
+        if (attr == "Type"){
             object = Factory::createObject(value);
             type = value;
             object->SetName(name);
             object->SetType(type);
             object->SetNumber(num_obj);
-        }else object->GetData(attri, value);
-        if (attri == "DrawSymbol") Storage::addObject(object);
+        }else{
+            object->GetData(attr, value);
+            if (object->CheckObject(type)){
+                if (object->CheckAttribute(attr) == false){
+                    std::cout << "\nWARNING: Object " << num_obj << " Type: " << type << " has strange attribute. This is " << attr << std::endl;
+                    has_error = true;
+                }
+            }
+        }
+        if (attr == "DrawSymbol") Storage::addObject(object);
     }
 }

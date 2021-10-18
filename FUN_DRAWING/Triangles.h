@@ -11,7 +11,6 @@ private:
     std::string TriangleType {0};
 public:
     Triangles();
-    std::string Attribute[4] = {"TriangleType","Width","Height","DrawSymbol"};
     void SetWidth(int w);
     void SetHeight(int h);
     int GetWidth();
@@ -23,5 +22,6 @@ public:
     void CheckingError();
     void Draw();
     void DataInfo();
+    bool CheckAttribute(std::string attr);
 };
 #endif // TRIANGLES_H

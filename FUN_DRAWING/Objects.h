@@ -32,6 +32,8 @@ class Objects
         virtual void CheckingError();
         virtual void Draw();
         virtual void DataInfo();
+        bool CheckObject(std::string type);
+        virtual bool CheckAttribute(std::string attr);
 };
 
 #endif // OBJECTS_H

@@ -25,3 +25,12 @@ void Objects::GetData(std::string attr, std::string value){}
 void Objects::CheckingError(){}
 void Objects::Draw(){}
 void Objects::DataInfo(){}
+bool Objects::CheckAttribute(std::string attr){}
+
+bool Objects::CheckObject(std::string type)
+{
+    for (auto i : ObjectType)
+    {
+        if (type == i) return true;
+    }return false;
+}

@@ -37,6 +37,6 @@ Direction = Vertical
 DrawSymbol = ~
 [Ex1_Shape8]
 Type = Ellipse
-BigAxis = 30
-SmallAxis = 20
+HorizontalAxis = 30
+VerticalAxis = 20
 DrawSymbol = -

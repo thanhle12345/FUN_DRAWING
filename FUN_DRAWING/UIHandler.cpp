@@ -37,19 +37,34 @@ void UIHandler::ShowOption()
 
 void UIHandler::Draw()
 {
-    system("CLS");
+    bool no_obj {false};
     std::vector<Objects*> ListObjects = Storage::getObject();
-    for (auto i : ListObjects)
-    {
-        i->CheckingObject();
-        i->CheckingError();
-        i->DataInfo();
-        i->Draw();
+    if (ListObjects.empty()){
+        no_obj = true;
+        std::cout << "No Object in memory.";
+        while (no_obj) {
+            std::cout << "\nPress [Enter] to continue..." << std::endl;
+            char cont;
+            cont = _getch();
+            if (cont == '\r'){
+               setkey = 0;
+               break;
+            }
+        }
+    }else{
+        system("CLS");
+        for (auto i : ListObjects)
+        {
+            i->CheckingObject();
+            i->CheckingError();
+            i->DataInfo();
+            i->Draw();
+        }
+        char cont;
+        std::cout << "\nDo you want to draw any shape else? [Y/N]: " ;
+        std::cin >> cont;
+        cont = toupper(cont);
+        if (cont == 'Y') setkey = 0;
+        else exit(0);
     }
-    char cont;
-    std::cout << "\nDo you want to draw any shape else? [Y/N]: " ;
-    std::cin >> cont;
-    cont = toupper(cont);
-    if (cont == 'Y') setkey = 0;
-    else exit(0);
 }

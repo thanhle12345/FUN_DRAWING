@@ -17,6 +17,8 @@
 
 #include "Triangles.h"
 
+const std::string Attribute[4] = {"TriangleType","Width","Height","DrawSymbol"};
+
 Triangles::Triangles(){}
 
 void Triangles::SetWidth(int w){Width = w;}
@@ -105,4 +107,12 @@ void Triangles::Draw()
         destCoord.Y = currentY;
         SetConsoleCursorPosition(hStdout, destCoord);
     }
+}
+
+bool Triangles::CheckAttribute(std::string attr)
+{
+    for (auto i:Attribute)
+    {
+        if (attr == i) return true;
+    } return false;
 }

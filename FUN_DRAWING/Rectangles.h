@@ -9,7 +9,6 @@ private:
     int Height {0};
 public:
     Rectangles();
-    std::string Attribute[3] = {"Width","Height","DrawSymbol"};
     void SetWidth(int w);
     void SetHeight(int h);
     int GetWidth();
@@ -19,5 +18,6 @@ public:
     void CheckingError();
     void Draw();
     void DataInfo();
+    bool CheckAttribute(std::string attr);
 };
 #endif // RECTANGLES_H

@@ -11,7 +11,6 @@ private:
     std::string Direction {0};
 public:
     Lines();
-    std::string Attribute[3] = {"Length","Direction","DrawSymbol"};
     void SetLength(int length);
     void SetDir(std::string dir);
     int GetLength();
@@ -21,6 +20,7 @@ public:
     void CheckingError();
     void Draw();
     void DataInfo();
+    bool CheckAttribute(std::string attr);
 };
 
 #endif // LINES_H

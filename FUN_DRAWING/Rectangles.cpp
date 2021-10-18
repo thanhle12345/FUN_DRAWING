@@ -15,6 +15,8 @@
 
 #include "Rectangles.h"
 
+const std::string Attribute[3] = {"Width","Height","DrawSymbol"};
+
 Rectangles::Rectangles(){}
 
 void Rectangles::SetWidth(int w){Width = w;}
@@ -80,4 +82,12 @@ void Rectangles::Draw()
         destCoord.Y = currentY;
         SetConsoleCursorPosition(hStdout, destCoord);
     }
+}
+
+bool Rectangles::CheckAttribute(std::string attr)
+{
+    for (auto i:Attribute)
+    {
+        if (attr == i) return true;
+    } return false;
 }

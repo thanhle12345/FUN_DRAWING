@@ -11,7 +11,6 @@ private:
     int VerticalAxis {0};
 public:
     Ellipses();
-    std::string Attribute[3] = {"HorizontalAxis","VerticalAxis","DrawSymbol"};
     void SetHorizontalAxis(int big);
     void SetVerticalAxis(int small);
     int GetHorizontalAxis();
@@ -22,6 +21,7 @@ public:
     void CheckingError();
     void Draw();
     void DataInfo();
+    bool CheckAttribute(std::string attr);
 };
 
 #endif // ELLIPSES_H

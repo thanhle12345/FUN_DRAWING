@@ -15,6 +15,8 @@
 
 #include "Ellipses.h"
 
+const std::string Attribute[3] = {"HorizontalAxis","VerticalAxis","DrawSymbol"};
+
 Ellipses::Ellipses(){}
 
 void Ellipses::SetHorizontalAxis(int big){HorizontalAxis = big;}
@@ -71,4 +73,12 @@ void Ellipses::DataInfo()
     std::cout << "VerticalAxis: " << VerticalAxis << std::endl;
     std::cout << "DrawSymbol: " << DrawSymBol << "\n" << std::endl;
     currentY += 6;
+}
+
+bool Ellipses::CheckAttribute(std::string attr)
+{
+    for (auto i:Attribute)
+    {
+        if (attr == i) return true;
+    } return false;
 }
