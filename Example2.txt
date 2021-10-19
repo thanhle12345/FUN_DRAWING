@@ -1,126 +1,126 @@
-[Ex2_Shape1]
+[TD-007]
 Type = Rec
 Width = 40
 Height = 30
 DrawSymbol = *
-[Ex2_Shape2]
+[TD-008]
 Type = Rectangle
 Width = 5
 Height = 30
 DrawSymbol = *
-[Ex2_Shape3]
+[TD-011]
 Type = Rectangle
 Width = 51
 Height = 30
 DrawSymbol = *
-[Ex2_Shape4]
+[TD-012]
 Type = Rectangle
 Width = 40
 Height = 5
 DrawSymbol = *
-[Ex2_Shape5]
+[TD-015]
 Type = Rectangle
 Width = 40
 Height = 51
 DrawSymbol = *
-[Ex2_Shape6]
+[TD-016]
 Type = Rectangle
 Width = 50
 Height = 40
 DrawSymbol = 
-[Ex2_Shape7]
+[TD-019]
 Type = Tri
 TriangleType = IsoscelesTriangle
 Width = 40
 Height = 30
 DrawSymbol = +
-[Ex2_Shape8]
+[TD-020]
 Type = Tri
 TriangleType = EquilateralTriangle
 Width = 40
 Height = 30
 DrawSymbol = +
-[Ex2_Shape9]
+[TD-021]
 Type = Triangle
 TriangleType = IsoscelesTriangle
 Width = 5
 Height = 30
 DrawSymbol = +
-[Ex2_Shape10]
+[TD-024]
 Type = Triangle
 TriangleType = IsoscelesTriangle
 Width = 51
 Height = 30
 DrawSymbol = +
-[Ex2_Shape11]
+[TD-025]
 Type = Triangle
 TriangleType = IsoscelesTriangle
 Width = 40
 Height = 9
 DrawSymbol = +
-[Ex1_Shape12]
+[TD-028]
 Type = Triangle
 TriangleType = IsoscelesTriangle
 Width = 40
 Height = 51
 DrawSymbol = +
-[Ex1_Shape13]
+[TD-029]
 Type = Triangle
 TriangleType = IsoscelesTriangle
 Width = 40
 Height = 30
 DrawSymbol = 
-[Ex1_Shape14]
+[TD-031]
 Type = Ell
 HorizontalAxis = 50
 VerticalAxis = 30
 DrawSymbol = -
-[Ex1_Shape15]
+[TD-032]
 Type = Ellipse
 HorizontalAxis = 9
 VerticalAxis = 30
 DrawSymbol = -
-[Ex1_Shape16]
+[TD-035]
 Type = Ellipse
 HorizontalAxis = 51
 VerticalAxis = 30
 DrawSymbol = -
-[Ex1_Shape17]
+[TD-036]
 Type = Ellipse
 HorizontalAxis = 35
 VerticalAxis = 9
 DrawSymbol = -
-[Ex1_Shape18]
+[TD-039]
 Type = Ellipse
 HorizontalAxis = 35
 VerticalAxis = 51
 DrawSymbol = -
-[Ex1_Shape19]
+[TD-040]
 Type = Ellipse
 HorizontalAxis = 20
 VerticalAxis = 30
 DrawSymbol = 
-[Ex1_Shape20]
+[TD-043]
 Type = Li
 Length = 50
 Direction = Vertical
 DrawSymbol = ~
-[Ex1_Shape21]
+[TD-044]
 Type = Line
 Length = 9
 Direction = Vertical
 DrawSymbol = ~
-[Ex1_Shape22]
+[TD-047]
 Type = Line
 Length = 51
 Direction = Vertical
 DrawSymbol = ~
-[Ex1_Shape23]
+[TD-048]
 Type = Line
 Length = 40
 Direction = Oblique
 DrawSymbol = ~
-[Ex1_Shape24]
+[TD-049]
 Type = Line
 Length = 40
 Direction = Vertical

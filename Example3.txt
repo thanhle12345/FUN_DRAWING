@@ -1,15 +1,15 @@
-[Shape1]
+[TD-003]
 Type = Line
 Length = 40
 Direction = Vertical
 DrawSymbol = *
-[Shape2]
+[TD-004]
 Type = Line
 Length = 70
 Alpha = 30
 Direction = Vertical
 DrawSymbol = *
-[Shape3]
+[TD-005]
 Type = Line
 Length : 40
 Direction=Vertical
