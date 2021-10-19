@@ -1,0 +1,16 @@
+[Shape1]
+Type = Line
+Length = 40
+Direction = Vertical
+DrawSymbol = *
+[Shape2]
+Type = Line
+Length = 70
+Alpha = 30
+Direction = Vertical
+DrawSymbol = *
+[Shape3]
+Type = Line
+Length : 40
+Direction=Vertical
+DrawSymbol = *

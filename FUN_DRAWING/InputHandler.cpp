@@ -4,14 +4,13 @@
 
 */
 static int num_obj;
-bool line_error {false}, has_error {false};
+bool line_error {false};
 
 InputHandler::InputHandler(){}
 
 void InputHandler::Readfile()
 {
     int num_line = 0;
-//    bool line_error {false}, has_error {false};
     std::cout << "Include File Path: ";
     std::getline(std::cin, filepath);
     std::cout << std::endl;
@@ -26,14 +25,13 @@ void InputHandler::Readfile()
                 if (inputline[0] == '[' || (inputline.find('=') != std::string::npos)) {GetData(inputline); line_error = false;}
                 else line_error = true;
                 if (line_error) {
-                    std::cout << "\nERROR: Line " << num_line << " is wrong format." << std::endl;
+                    std::cout << "ERROR: Line " << num_line << " is wrong format." << std::endl;
                     std::cout << "Error at Object " << num_obj << " name: " << name << std::endl;
-                    currentY +=2;
-                    has_error = true;
+//                    currentY +=2;
                 }
             }
             myfile.close();
-            while (has_error) {
+            while (1) {
                 std::cout << "\nPress [Enter] to continue..." << std::endl;
                 char cont;
                 cont = _getch();
@@ -86,12 +84,13 @@ void InputHandler::GetData(std::string data)
             object->SetName(name);
             object->SetType(type);
             object->SetNumber(num_obj);
+            std::cout << "\nObject  " << num_obj << " was loaded to memory." << std::endl;
+//            currentY+=2;
         }else{
             object->GetData(attr, value);
             if (object->CheckObject(type)){
                 if (object->CheckAttribute(attr) == false){
-                    std::cout << "\nWARNING: Object " << num_obj << " Type: " << type << " has strange attribute. This is " << attr << std::endl;
-                    has_error = true;
+                    std::cout << "WARNING: Object " << num_obj << " Type: " << type << " has strange attribute. This is " << attr << std::endl;
                 }
             }
         }

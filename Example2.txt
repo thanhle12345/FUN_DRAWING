@@ -1,25 +1,127 @@
 [Ex2_Shape1]
-Type = Circle
-Width = 50
+Type = Rec
+Width = 40
 Height = 30
 DrawSymbol = *
-asasdasfafasfas
 [Ex2_Shape2]
-Type = Triangle
-TriangleType = RightTriangle
-Width = 40
-DrawSymbol = +
+Type = Rectangle
+Width = 5
+Height = 30
+DrawSymbol = *
 [Ex2_Shape3]
-Type = Ellipse
-HorizontalAxis = -50
-VerticalAxis = -30
-DrawSymbol = -
+Type = Rectangle
+Width = 51
+Height = 30
+DrawSymbol = *
 [Ex2_Shape4]
-Type = Line
-Length = 50
-DrawSymbol = ~
+Type = Rectangle
+Width = 40
+Height = 5
+DrawSymbol = *
 [Ex2_Shape5]
 Type = Rectangle
-Width = 30
-Height = 20
+Width = 40
+Height = 51
 DrawSymbol = *
+[Ex2_Shape6]
+Type = Rectangle
+Width = 50
+Height = 40
+DrawSymbol = 
+[Ex2_Shape7]
+Type = Tri
+TriangleType = IsoscelesTriangle
+Width = 40
+Height = 30
+DrawSymbol = +
+[Ex2_Shape8]
+Type = Tri
+TriangleType = EquilateralTriangle
+Width = 40
+Height = 30
+DrawSymbol = +
+[Ex2_Shape9]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 5
+Height = 30
+DrawSymbol = +
+[Ex2_Shape10]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 51
+Height = 30
+DrawSymbol = +
+[Ex2_Shape11]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 40
+Height = 9
+DrawSymbol = +
+[Ex1_Shape12]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 40
+Height = 51
+DrawSymbol = +
+[Ex1_Shape13]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 40
+Height = 30
+DrawSymbol = 
+[Ex1_Shape14]
+Type = Ell
+HorizontalAxis = 50
+VerticalAxis = 30
+DrawSymbol = -
+[Ex1_Shape15]
+Type = Ellipse
+HorizontalAxis = 9
+VerticalAxis = 30
+DrawSymbol = -
+[Ex1_Shape16]
+Type = Ellipse
+HorizontalAxis = 51
+VerticalAxis = 30
+DrawSymbol = -
+[Ex1_Shape17]
+Type = Ellipse
+HorizontalAxis = 35
+VerticalAxis = 9
+DrawSymbol = -
+[Ex1_Shape18]
+Type = Ellipse
+HorizontalAxis = 35
+VerticalAxis = 51
+DrawSymbol = -
+[Ex1_Shape19]
+Type = Ellipse
+HorizontalAxis = 20
+VerticalAxis = 30
+DrawSymbol = 
+[Ex1_Shape20]
+Type = Li
+Length = 50
+Direction = Vertical
+DrawSymbol = ~
+[Ex1_Shape21]
+Type = Line
+Length = 9
+Direction = Vertical
+DrawSymbol = ~
+[Ex1_Shape22]
+Type = Line
+Length = 51
+Direction = Vertical
+DrawSymbol = ~
+[Ex1_Shape23]
+Type = Line
+Length = 40
+Direction = Oblique
+DrawSymbol = ~
+[Ex1_Shape24]
+Type = Line
+Length = 40
+Direction = Vertical
+DrawSymbol = 

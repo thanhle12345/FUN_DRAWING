@@ -1,6 +1,6 @@
 [Ex1_Shape1]
 Type = Rectangle
-Width = 50
+Width = 40
 Height = 30
 DrawSymbol = *
 [Ex1_Shape2]
@@ -10,33 +10,23 @@ Width = 40
 Height = 30
 DrawSymbol = +
 [Ex1_Shape3]
+Type = Triangle
+TriangleType = IsoscelesTriangle
+Width = 40
+Height = 30
+DrawSymbol = -
+[Ex1_Shape4]
 Type = Ellipse
 HorizontalAxis = 50
 VerticalAxis = 30
 DrawSymbol = -
-[Ex1_Shape4]
-Type = Line
-Length = 50
-Direction = Vertical
-DrawSymbol = ~
 [Ex1_Shape5]
-Type = Rectangle
-Width = 30
-Height = 20
-DrawSymbol = *
+Type = Line
+Length = 50
+Direction = Horizontal
+DrawSymbol = o
 [Ex1_Shape6]
-Type = Triangle
-TriangleType = IsoscelesTriangle
-Width = 31
-Height = 20
-DrawSymbol = +
-[Ex1_Shape7]
 Type = Line
 Length = 50
 Direction = Vertical
 DrawSymbol = ~
-[Ex1_Shape8]
-Type = Ellipse
-HorizontalAxis = 30
-VerticalAxis = 20
-DrawSymbol = -
