@@ -2,8 +2,8 @@
         Rectangles Data format:
             Type: Triangle
             TriangleType: "IsoscelesTriangle" or "RightTriangle"
-            Width: between 10 and 100.
-            Height: between 10 and 100.
+            Width: between 10 and 50.
+            Height: between 10 and 50.
             DrawSymbol: a character.
 
         Example:
@@ -37,8 +37,8 @@ void Triangles::GetData(std::string attr, std::string value)
 void Triangles::CheckingError()
 {
     if (TriangleType != "IsoscelesTriangle" && TriangleType != "RightTriangle") {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Triangle Type. Triangle Type can be RightTriangle or IsoscelesTriangle" << std::endl; error = true; currentY++;}
-    if (Width < 10 || Width > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 100." << std::endl;  error = true; currentY++;}
-    if (Height < 10 || Height > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between and to 100." << std::endl; error = true; currentY++;}
+    if (Width < 10 || Width > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 50." << std::endl;  error = true; currentY++;}
+    if (Height < 10 || Height > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between and to 50." << std::endl; error = true; currentY++;}
     if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 

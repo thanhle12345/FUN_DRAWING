@@ -1,8 +1,8 @@
 /*
         Rectangles Data format:
             Type: Rectangle
-            Width: between 10 and 100.
-            Height: between 10 and 100.
+            Width: between 10 and 50.
+            Height: between 10 and 50.
             DrawSymbol: a character.
 
         Example:
@@ -33,8 +33,8 @@ void Rectangles::GetData(std::string attr, std::string value)
 
 void Rectangles::CheckingError()
 {
-    if (Width < 10 || Width > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 100." << std::endl; error = true; currentY++;}
-    if (Height < 10 || Height > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between 10 and 100." << std::endl; error = true; currentY++;}
+    if (Width < 10 || Width > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Width. Width between 10 and 50." << std::endl; error = true; currentY++;}
+    if (Height < 10 || Height > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid Height. Height between 10 and 50." << std::endl; error = true; currentY++;}
     if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 

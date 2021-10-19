@@ -1,8 +1,8 @@
 /*
         Ellipse Data format:
             Type: Ellipse
-            HorizontalAxis: between 10 and 100.
-            VerticalAxis: between 10 and 100.
+            HorizontalAxis: between 10 and 50.
+            VerticalAxis: between 10 and 50.
             DrawSymbol: a character.
 
         Example:
@@ -33,8 +33,8 @@ void Ellipses::GetData(std::string attr, std::string value)
 
 void Ellipses::CheckingError()
 {
-    if (HorizontalAxis < 10 || HorizontalAxis > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid HorizontalAxis. HorizontalAxis between 10 and 100." << std::endl; error = true; currentY++;}
-    if (VerticalAxis < 10 || VerticalAxis > 100) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid VerticalAxis. VerticalAxis between 10 and 100." << std::endl; error = true; currentY++;}
+    if (HorizontalAxis < 10 || HorizontalAxis > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid HorizontalAxis. HorizontalAxis between 10 and 50." << std::endl; error = true; currentY++;}
+    if (VerticalAxis < 10 || VerticalAxis > 50) {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid VerticalAxis. VerticalAxis between 10 and 50." << std::endl; error = true; currentY++;}
     if (DrawSymBol == '\0') {std::cout << "ERROR: Object " << Number << ": " << Name << " Invalid DrawSymbol. No DrawSymbol." << std::endl; error = true; currentY++;}
 }
 
